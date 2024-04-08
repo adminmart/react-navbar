@@ -7,9 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "index.js"),
-      fileName: "index",
-      formats: ["es"],
-      // formats: ["es", "cjs"],
+      name: "ViteButton",
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -20,10 +19,8 @@ export default defineConfig({
         },
       },
     },
-    sourcemap: false,
+    sourcemap: true,
     emptyOutDir: true,
-    minify:true
   },
-  plugins: [react(), dts()],  
-
+  plugins: [react(), dts()],
 });
