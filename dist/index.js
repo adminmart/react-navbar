@@ -649,4 +649,3 @@ export {
   cr as Reactmenuitem,
   dr as Reactsubmenu
 };
-//# sourceMappingURL=index.es.js.map
